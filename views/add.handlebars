@@ -1,0 +1,48 @@
+<header class="masthead">
+    <div id="add-form-container" class="container">
+        <div class="col-md-12" id="titleAdd">
+            <h1>Cadastro de Pessoas</h1>
+        </div>
+        <form id="add-person-form" action="/pessoas/add" method="POST">
+            <!-- Name input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="name" name="Nome" type="text" placeholder="Digite o nome completo" required />
+                <label for="name">Nome completo</label>
+                <small id="nameHelp">Este campo possui limite de 40 caracteres</small>
+            </div>
+            <!-- Birthdate input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="birthdate" name="DataNasc" type="text" placeholder="Digite uma data válida" required />
+                <label for="birthdate">Data de nascimento</label>
+            </div>
+            <!-- Address input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="address" name="Endereco" type="text" placeholder="Digite um endereço" required />
+                <label for="address">Endereço completo</label>
+                <small id="addressHelp">Este campo possui limite de 50 caracteres</small>
+            </div>
+            <!-- Phone number input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="phone" name="Telefone" type="tel" placeholder="(123) 456-7890" required />
+                <label for="phone">Número de telefone</label>
+            </div>
+            <!-- Email address input-->
+            <div class="form-floating mb-3">
+                <input class="form-control" id="email" name="Email" type="email" placeholder="name@example.com" required />
+                <label for="email">Endereço de E-mail</label>
+                <div class="invalid-feedback" data-sb-feedback="email:email">Endereço de e-mail inválido.</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-xl">Enviar</button>
+        </form>
+        <!-- Submit success message-->
+        <!-- This is what your users will see when the form-->
+        <!-- has successfully submitted-->
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Enviado com sucesso!</div>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="/scripts/script.js"></script>
+
